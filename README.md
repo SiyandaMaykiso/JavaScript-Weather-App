@@ -1,5 +1,9 @@
 # JavaScript-Weather-App
 
+## Links
+
+Deployed Application: https://siyandamaykiso.github.io/JavaScript-Weather-App/
+
 This is a practical weather App made with JavaScript that tells you the weather in your current location.
 
 I created a new web application with JavaScript. This is functional Weather App.
