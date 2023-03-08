@@ -12,7 +12,7 @@ I added an API within the JavaScript
 
 1. The weather app will show the weather information that it will get from the API.
 
-2. An Icon that shows the weather status, the temperature value example (2°C) in Celsius unit, the weather description (overcast clouds), and then the user's city and country (Minneapolis, USA).
+2. An Icon that shows the weather status, the temperature value example (2°C) in Celsius unit, the weather description (overcast clouds), and then the user's city and country example (Minneapolis, USA).
 
 3. For those who use Fahrenheit, when the user clicks on the temperature value, that will convert it from Celsius to Fahrenheit.
 
