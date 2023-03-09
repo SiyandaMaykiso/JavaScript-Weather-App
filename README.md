@@ -10,7 +10,7 @@ I created a new web application with JavaScript. This is functional Weather App.
 
 I utilised JavaScript, HTML and CSS
 
-I added an API within the JavaScript
+I added the OpenWeather API within the JavaScript
 
 
 ### Screenshot
