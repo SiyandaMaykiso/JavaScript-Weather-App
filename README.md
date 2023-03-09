@@ -12,6 +12,11 @@ I utilised JavaScript, HTML and CSS
 
 I added an API within the JavaScript
 
+
+### Screenshot
+
+<img src="https://github.com/SiyandaMaykiso/JavaScript-Weather-App/blob/main/Screenshot%20Current%20Weather%20App.png" alt="application screenshot">
+
 ## Functionality 
 
 1. The weather app will show the weather information that it will get from the API.
