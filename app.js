@@ -12,6 +12,7 @@ const notificationElement = document.querySelector(".notification");
 // Weather data object
 const weather = {
   temperature: {
+    value: null,
     unit: "celsius",
   },
 };
@@ -40,7 +41,7 @@ function showNotification(message) {
   notificationElement.innerHTML = `<p>${message}</p>`;
 }
 
-// Fetch weather data
+// Fetch weather data and detect preferred unit
 async function getWeather(latitude, longitude) {
   const api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
 
@@ -48,11 +49,22 @@ async function getWeather(latitude, longitude) {
     const response = await fetch(api);
     const data = await response.json();
 
-    weather.temperature.value = Math.floor(data.main.temp - KELVIN);
+    const country = data.sys.country;
+    const tempKelvin = data.main.temp;
+
     weather.description = data.weather[0].description;
     weather.iconId = data.weather[0].icon;
     weather.city = data.name;
-    weather.country = data.sys.country;
+    weather.country = country;
+
+    // Determine temperature unit based on location
+    if (country === "US") {
+      weather.temperature.unit = "fahrenheit";
+      weather.temperature.value = kelvinToFahrenheit(tempKelvin);
+    } else {
+      weather.temperature.unit = "celsius";
+      weather.temperature.value = kelvinToCelsius(tempKelvin);
+    }
 
     displayWeather();
   } catch (error) {
@@ -62,16 +74,19 @@ async function getWeather(latitude, longitude) {
 
 // Display weather to UI
 function displayWeather() {
-  iconElement.innerHTML = `<img src="icons/${weather.iconId}.png" alt="weather icon"/>`;
-  tempElement.innerHTML = `${weather.temperature.value}<span>°C</span>`;
+  iconElement.innerHTML = `<img src="icons/${weather.iconId}.png" alt="weather icon" />`;
+  tempElement.innerHTML = `${weather.temperature.value}<span>°${weather.temperature.unit === "celsius" ? "C" : "F"}</span>`;
   descElement.innerHTML = weather.description;
   locationElement.innerHTML = `${weather.city}, ${weather.country}`;
 }
 
-// Celsius to Fahrenheit conversion
-const celsiusToFahrenheit = (tempC) => Math.floor((tempC * 9) / 5 + 32);
+// Conversion helpers
+const kelvinToCelsius = (k) => Math.floor(k - KELVIN);
+const kelvinToFahrenheit = (k) => Math.floor((k - KELVIN) * 9 / 5 + 32);
+const celsiusToFahrenheit = (c) => Math.floor((c * 9) / 5 + 32);
+const fahrenheitToCelsius = (f) => Math.floor((f - 32) * 5 / 9);
 
-// Toggle temperature unit
+// Toggle temperature unit on click
 tempElement.addEventListener("click", () => {
   if (weather.temperature.value === undefined) return;
 
@@ -79,8 +94,11 @@ tempElement.addEventListener("click", () => {
     const fahrenheit = celsiusToFahrenheit(weather.temperature.value);
     tempElement.innerHTML = `${fahrenheit}<span>°F</span>`;
     weather.temperature.unit = "fahrenheit";
+    weather.temperature.value = fahrenheit;
   } else {
-    tempElement.innerHTML = `${weather.temperature.value}<span>°C</span>`;
+    const celsius = fahrenheitToCelsius(weather.temperature.value);
+    tempElement.innerHTML = `${celsius}<span>°C</span>`;
     weather.temperature.unit = "celsius";
+    weather.temperature.value = celsius;
   }
 });
