@@ -94,10 +94,21 @@
     font-size: 0.9em;
   }
   
-  /* Footer */
-  .footer {
-    margin-top: 15px;
-    text-align: center;
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 10px;
+    left: 15px;
     font-size: 0.9em;
-    color: #aaa;
+    color: #ccc;
+    font-style: italic;
+    z-index: 10;
+    background: none;
+    text-align: left;
+    pointer-events: none;
+  }
+  
+  .footer strong {
+    color: #fff;
+    font-weight: 600;
   }
