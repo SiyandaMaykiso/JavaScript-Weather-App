@@ -1,33 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="font/Rimouski.css">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Check your local weather instantly with this modern weather app." />
+  <title>Current Weather App</title>
+  
+  <!-- Custom Font -->
+  <link rel="stylesheet" href="font/Rimouski.css" />
+  
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-   <div class="container">
-       <div class="app-title">
-           <p>
-               Your Current Weather
-           </p>
-       </div>
-       <div class="notification"></div>
-       <div class="weather-container">
-           <div class="weather-icon"><img src="icons/unknown.png"></div>
-           <div class="temperature-value">
-               <p>- 0176
-                   <span>C</span>
+  <main class="container">
+    <header class="app-title">
+      <h1>Your Current Weather</h1>
+    </header>
 
-               </p>
-           </div>
-           <div class="temperature-description"><p>-</p></div>
-           <div class="location"><p>-</p></div>
-       </div>
+    <section class="notification" aria-live="polite"></section>
 
-   </div>
-   <script src="app.js"></script>
+    <section class="weather-container">
+      <div class="weather-icon">
+        <img src="icons/unknown.png" alt="Weather icon" id="weather-icon" />
+      </div>
 
+      <div class="temperature-value" id="temperature-value">
+        <p>-- <span>C</span></p>
+      </div>
+
+      <div class="temperature-description" id="temperature-description">
+        <p>--</p>
+      </div>
+
+      <div class="location" id="location">
+        <p>--</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Created by <strong>Siyanda Burnham</strong></p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
 </body>
 </html>
-
-Siyanda Mayekiso
