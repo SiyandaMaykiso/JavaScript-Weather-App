@@ -25,7 +25,7 @@ I added the OpenWeather API within the JavaScript
 
 3. For those who use Fahrenheit, when the user clicks on the temperature value, that will convert it from Celsius to Fahrenheit.
 
-Siyanda Mayekiso
+Siyanda Burnham
 
 
 
