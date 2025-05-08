@@ -48,6 +48,7 @@ A sleek, real-time weather application built with vanilla JavaScript, HTML, and 
  Author
 
 Created by Siyanda Burnham
+
 JavaScript | Full Stack | API Integrator
 
 
