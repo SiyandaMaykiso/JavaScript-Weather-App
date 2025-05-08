@@ -1,32 +1,54 @@
-# JavaScript-Weather-App
+# JavaScript Weather App
 
-## Links
+A sleek, real-time weather application built with vanilla JavaScript, HTML, and CSS. It fetches weather data based on your current location and displays temperature, conditions, and city/country information. Automatically adjusts to show **Fahrenheit** for U.S. users and **Celsius** elsewhere.
 
-Deployed Application: https://siyandamaykiso.github.io/JavaScript-Weather-App/
+---
 
-This is a practical weather App made with JavaScript that tells you the weather in your current location.
+## Live Demo
 
-I created a new web application with JavaScript. This is functional Weather App.
+🔗 [Deployed Application](https://siyandamaykiso.github.io/JavaScript-Weather-App/)
 
-I utilised JavaScript, HTML and CSS
+---
 
-I added the OpenWeather API within the JavaScript
+## Screenshot
 
+<img src="https://raw.githubusercontent.com/SiyandaMaykiso/JavaScript-Weather-App/main/Screenshot_2025.png" alt="JavaScript Weather App Screenshot" width="600">
 
-### Screenshot
+---
 
-<img src="https://raw.githubusercontent.com/SiyandaMaykiso/JavaScript-Weather-App/main/Screenshot_2025.png" alt="application screenshot">
+## Technologies Used
 
-## Functionality 
+- **JavaScript (ES6+)**
+- **HTML5 & Semantic Tags**
+- **CSS3 (Flexbox & Responsive Styling)**
+- [OpenWeatherMap API](https://openweathermap.org/api)
 
-1. The weather app will show the weather information that it will get from the API.
+---
 
-2. An Icon that shows the weather status, the temperature value example (2°C) in Celsius unit, the weather description (overcast clouds), and then the user's city and country example (Minneapolis, USA).
+## Features
 
-3. For those who use Fahrenheit, when the user clicks on the temperature value, that will convert it from Celsius to Fahrenheit.
+-  Auto-fetches weather data using geolocation
+-  Detects user's country to display **Fahrenheit** (🇺🇸) or **Celsius** (🌐)
+-  Displays:
+  - Weather icon
+  - Temperature with unit toggle
+  - Weather description (e.g., "overcast clouds")
+  - User's city and country
+-  Mobile-responsive UI
+-  Click the temperature to toggle between °C and °F
 
-Siyanda Burnham
+---
 
+##  Installation (Optional for Local Use)
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/SiyandaMaykiso/JavaScript-Weather-App.git
+
+ Author
+
+Created by Siyanda Burnham
+JavaScript | Full Stack | API Integrator
 
 
 
