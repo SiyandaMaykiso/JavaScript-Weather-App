@@ -15,7 +15,7 @@ I added the OpenWeather API within the JavaScript
 
 ### Screenshot
 
-<img src="https://github.com/SiyandaMaykiso/JavaScript-Weather-App/blob/main/Screenshot%20Current%20Weather%20App.png" alt="application screenshot">
+<img src="https://raw.githubusercontent.com/SiyandaMaykiso/JavaScript-Weather-App/main/Screenshot_2025.png" alt="application screenshot">
 
 ## Functionality 
 
